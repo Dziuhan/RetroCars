@@ -1,0 +1,1 @@
+select count (orders.id) from orders left join cars on orders.car_id=cars.id where state='closed' and cars.producer='Rolls- Royce' ;

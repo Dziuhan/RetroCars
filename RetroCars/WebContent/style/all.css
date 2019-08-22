@@ -1,0 +1,105 @@
+body {
+	background-color: #d0d2d2;
+	padding: 25px;
+	font-family: cursive;
+}
+
+body#Banned {
+	background: url(/RetroCars/picture/Banned.jpg) no-repeat;
+	background-size: 100%;
+}
+
+input {
+	border-radius: 5px;
+	padding: 4px;
+	margin: 4ps
+}
+
+table {
+	margin-left: 10px;
+	margin-right: 25px;
+	border: thin solid black;
+	border-radius: 15px;
+}
+
+td {
+	border: thin dotted gray;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+th {
+	padding: 5px;
+	border-radius: 10px;
+}
+
+tr.color:nth-child(2n) {
+	background-color: #f3f3f3;
+}
+
+tr.color:nth-child(2n+1) {
+	background-color: #e4e4e4;
+}
+
+.center {
+	text-align: center;
+}
+
+#languageForm {
+	display: inline;
+	background-color: #aa95da;
+}
+
+.Large {
+	display: inline-table;
+	width: 225px;
+	height: 150px;
+	margin: 3px;
+}
+
+.inline {
+	display: inline-table;
+	padding: 3px;
+}
+
+#sorterCars {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#filterCars {
+	padding-top: 10px;
+	vertical-align: top;
+	width: 200px;
+}
+
+#tableCars {
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+#leftHeader {
+	float: left;
+}
+
+#rightHeader {
+	float: right;
+}
+
+#order {
+	text-align: center;
+	background-color: #f3f3f3;
+	float: right;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+#Header {
+	clear: both;
+	height: 50px;
+}
+
+b#messeageForGuest {
+	padding-right: 100px;
+	color: red;
+}

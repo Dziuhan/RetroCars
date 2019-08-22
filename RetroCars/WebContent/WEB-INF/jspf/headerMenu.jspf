@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="style/all.css" />
+<header>
+	<fmt:setLocale value="${local}" />
+	<fmt:bundle
+		basename="ua.RetroCars.web.ResourceBundle.Page"
+		prefix="header.">
+		<div id="Header">
+			<div id="leftHeader">
+				<a href="ClientController"> <fmt:message key="cars" /></a>
+				<c:if test="${role=='admin'}">
+					<a href="ManagerController"><fmt:message key="Manager" /></a>
+					<a href="AdminController"><fmt:message key="Administrator" /></a>
+				</c:if>
+				<c:if test="${role=='manager'}">
+					<a href="ManagerController"><fmt:message key="Manager" /></a>
+				</c:if>
+			</div>
+
+			<div id="rightHeader">
+				<c:choose>
+					<c:when test="${not empty login}">
+						<a
+							href="ClientController?command=Language&Language=ru">
+							<img alt="ru" src="/RetroCars/picture/ruFlag.jpg">
+						</a>
+						<a
+							href="ClientController?command=Language&Language=en">
+							<img alt="en" src="/RetroCars/picture/enFlag.jpg">
+						</a>
+						<a href="ClientController?command=CabinetClient"> ${login} </a>
+						<a href="ClientController?command=Logout"><fmt:message
+								key="Logout" /> </a>
+					</c:when>
+					<c:otherwise>
+						<form action="ClientController" method="post">
+							<b id="messeageForGuest">${messageForGuest} </b> <a
+								href="ClientController?command=Language&Language=ru">
+								<img alt="ru" src="/RetroCars/picture/ruFlag.jpg">
+							</a> <a
+								href="ClientController?command=Language&Language=en">
+								<img alt="en" src="/RetroCars/picture/enFlag.jpg">
+							</a> <b> <fmt:message key="Login" /></b> <input name="login"
+								placeholder="login" required="required" value=""> <b>
+								<fmt:message key="Password" />
+							</b> <input name="password" placeholder="password"
+								required="required" value="" type="password"> <input
+								type="hidden" name="command" value="login/Registration">
+							<input type="submit"
+								value="<fmt:message key="loginRegistration"/>">
+						</form>
+					</c:otherwise>
+				</c:choose>
+			</div>
+		</div>
+	</fmt:bundle>
+</header>
+<hr>
+
+
+
