@@ -37,21 +37,11 @@
 				<input type="submit" value="<fmt:message key="AllUsers"/>">
 			</form>
 
-
-			<a href="AdminController?commandAdmin=Task">Task</a>
-
 		</div>
 		<hr>
 
 		<c:choose>
-			<c:when test="${commandAdmin=='Task'}">
-				<b>Count: ${taskCount} </b>
-				<div>Logins:</div>
-				<c:forEach items="${taskLogins}" var="login">
-					<b> ${login} </b>
-				</c:forEach>
-
-			</c:when>
+			
 			<c:when test="${commandAdmin=='New car' or commandAdmin=='Edit car'}">
 				<jsp:include page="/WEB-INF/jspf/admin/newEditCarAdmin.jsp" />
 			</c:when>

@@ -47,10 +47,6 @@ public class AdminCommandExecutor {
 			} else if (commandAdmin.equals("Edit user")) {
 				editUser(request, response);
 				
-			}else if (commandAdmin.equals("Task")) {
-				request.setAttribute("taskCount",dbManager.selectCountOrdersByStateProducer(Order.STATE_CLOSED, "Rolls- Royce"));
-				request.setAttribute("taskLogins",dbManager.selectLoginsOrdersByStateProducer(Order.STATE_CLOSED, "Rolls- Royce"));
-				request.getRequestDispatcher("/WEB-INF/jsp/admin/MainAdmin.jsp").forward(request,response);
 			}else if (commandAdmin.equals("Filter")) {				
 				Filter.filterCar(request, response);				
 				request.getRequestDispatcher("/WEB-INF/jsp/admin/MainAdmin.jsp").forward(request, response);
