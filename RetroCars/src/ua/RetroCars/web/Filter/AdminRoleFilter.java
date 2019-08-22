@@ -26,7 +26,7 @@ public class AdminRoleFilter implements Filter {
 	 * @see Filter#destroy()
 	 */
 	public void destroy() {
-		LOG.debug("Filter destruction starts");	
+		LOG.debug("Filter destruction start");	
 		LOG.debug("Filter destruction finished");
 	}
 
@@ -56,7 +56,7 @@ public class AdminRoleFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		LOG.debug("Filter initialization finished");		
+		LOG.debug("Filter initialization start");		
 		LOG.debug("Filter initialization finished");
 	}
 

@@ -20,7 +20,7 @@ public class EncodingFilter implements Filter {
 	private static final Logger LOG = Logger.getLogger(EncodingFilter.class);
 	
 	public void destroy() {
-		LOG.debug("Filter destruction starts");	
+		LOG.debug("Filter destruction start");	
 		LOG.debug("Filter destruction finished");
 	}
 	public void doFilter(ServletRequest request, ServletResponse response,
@@ -33,7 +33,7 @@ public class EncodingFilter implements Filter {
 	}
 	
 	public void init(FilterConfig fConfig) throws ServletException {
-		LOG.debug("Filter initialization finished");		
+		LOG.debug("Filter initialization start");		
 		LOG.debug("Filter initialization finished");
 	}
 
